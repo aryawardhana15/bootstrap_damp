@@ -30,11 +30,12 @@
         }
         
         /* Navbar */
+
         .navbar {
             padding: 20px 0;
             transition: all 0.3s;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            background-color: var(--dark-color);
+            background-color: var(--dark-color) !important; /* Pastikan warna awal konsisten */
         }
         
         .navbar.scrolled {
@@ -43,34 +44,35 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         
-        .navbar.scrolled .nav-link {
+        /* Warna teks navbar saat normal */
+        .navbar-dark .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Warna teks navbar saat di-scroll */
+        .navbar.scrolled .navbar-nav .nav-link {
             color: var(--dark-color) !important;
         }
         
-        .nav-link {
-            font-weight: 500;
-            margin: 0 12px;
-            position: relative;
-            color: white;
+        /* Warna toggle button saat normal */
+        .navbar-dark .navbar-toggler {
+            color: rgba(255, 255, 255, 0.9);
+            border-color: rgba(255, 255, 255, 0.2);
         }
         
-        .navbar.scrolled .nav-link {
+        /* Warna toggle button saat di-scroll */
+        .navbar.scrolled .navbar-toggler {
             color: var(--dark-color);
+            border-color: rgba(30, 41, 59, 0.2);
         }
         
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--accent-color);
-            transition: width 0.3s;
+        /* Warna icon toggle button */
+        .navbar-dark .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
         
-        .nav-link:hover::after {
-            width: 100%;
+        .navbar.scrolled .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2830, 41, 59, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
 
         
@@ -395,15 +397,12 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#">
-            <img src="logo-inovatera.png" alt="Inovatera Logo"
-                 width="50" height="50"
-                 class="d-inline-block align-top rounded-circle shadow-sm border border-light ">
-       
-          </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="#">
+                <img src="logo-inovatera.png" alt="Inovatera Logo" width="50" height="50" class="d-inline-block align-top rounded-circle shadow-sm border border-light">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -424,6 +423,7 @@
             </div>
         </div>
     </nav>
+
 
     <!-- Hero Section (Jumbotron) -->
     <section id="home" class="hero-section">
