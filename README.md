@@ -1,5 +1,5 @@
 ## Deskripsi
-Website ini adalah mockup untuk tim kreatif XYZ, dibangun menggunakan Bootstrap 5 dengan desain yang modern dan responsif. Website ini mencakup beberapa bagian utama:
+Website ini adalah mockup untuk tim DAMP, dibangun menggunakan Bootstrap 5 dengan desain yang modern dan responsif. Website ini mencakup beberapa bagian utama:
 
 - Navbar dengan logo dan menu navigasi
 - Hero Section (Jumbotron) sebagai halaman utama
